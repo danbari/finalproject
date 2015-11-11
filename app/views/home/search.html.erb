@@ -1,2 +1,31 @@
-<h1>Home#search</h1>
-<p>Find me in app/views/home/search.html.erb</p>
+<p> <h1>Search</h1> </p>
+
+<%= form_tag :action => 'search' do %>
+
+	<hr/>
+	<% if @results>0 %>
+		<% if @productlist.length >0 %>
+			<p> Here are the search results:</p>
+			<p>
+			<table>
+			<tr>
+				<th>Product Name</th>
+				<th>Image</th>
+				<th>Description</th>
+			</tr>
+			<% @productlist.each do |p| %>
+				<tr>
+				<td><%= link_to p.productname, product_path(p.id) %></td>
+				<td><%= p.productimage %></td>
+				<td><%= p.description %></td>
+				</tr>
+			<% end %>
+			</table>
+
+		<% else%>
+			<p>There were no products with your search criteria. Try again!</p>
+		<% end %>
+	<% end %>
+
+	<%= submit_tag 'Search' %>
+<% end %>
