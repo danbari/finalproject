@@ -124,8 +124,6 @@ DEPENDENCIES
 <<<<<<< HEAD
   bcrypt (~> 3.1.7)
 =======
-  autoprefixer-rails
-  bootstrap-sass (~> 3.2.0)
 >>>>>>> origin/master
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
