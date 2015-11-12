@@ -1,0 +1,45 @@
+<div id="header" >
+<table>
+	<tr>
+     <td>
+	   <table>
+	     <tr>
+	        <td><%= image_tag 'logo.jpg', :size => "70x70" %> </td>
+            <td><h1></h1>
+			<td>
+				<%= form_tag :controller => 'home', :action => 'search' do %>
+			         <p>Search: <%= text_field_tag 'searchinput', @searchinput  %> </p>
+		        <% end %>
+			</td>
+			<td>
+						<% if session[:user_id].nil? %>
+					       <%= link_to "New Customer", new_person_path %>
+					       <%= button_to 'Login', login_path, :method => :get %>
+				        <% else %>
+					        Hello <%= Person.find(session[:user_id]).lastname %> !
+					        <%= button_to 'Logout', logout_path, :method => :delete %>
+				        <% end %>
+
+					</td>
+	     </tr>
+	   </table>
+
+</td></tr>
+<tr>
+	<td>
+	<table>
+		<tr>
+			<td><%= link_to_unless_current "Home", home_index_path %>	</td>
+			<td><%= link_to_unless_current "About Us", home_about_path %> </td>
+			<td><%= link_to_unless_current "Contact Us", home_contact_path %></td>
+			<td><%= link_to "Products", products_path %> </td>
+			<td><%= link_to "Customers", people_path %> </td>
+			<td><%= link_to "Reviews", reviews_path %> </td>
+			<td><%= link_to "Sales", sales_path %> </td>
+
+		</tr>
+	</table>
+	</td>
+</tr>
+</table>
+</div>
