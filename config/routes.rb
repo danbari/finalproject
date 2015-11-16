@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "login" => "sessions#new", :as => "login"
+  delete 'logout' => "sessions#destroy", :as => "logout"
+
   resources :reviews
 
   resources :people

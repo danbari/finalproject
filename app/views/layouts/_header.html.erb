@@ -19,7 +19,6 @@
 					        Hello <%= Person.find(session[:user_id]).lastname %> !
 					        <%= button_to 'Logout', logout_path, :method => :delete %>
 				        <% end %>
-
 					</td>
 	     </tr>
 	   </table>
