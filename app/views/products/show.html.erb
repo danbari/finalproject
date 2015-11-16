@@ -15,5 +15,14 @@
   <%= @product.price %>
 </p>
 
+<p>
+  <strong>Photo:</strong><br />
+  <% if @product.has_photo? %>
+    <%= image_tag @product.photo_path %>
+  <% else %>
+    No photo.
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
