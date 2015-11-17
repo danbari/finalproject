@@ -12,6 +12,7 @@ h1 {
  	margin-left: 40%;
  	
 }*/
+}
 
 h1 {
 	font-family: helvetica, arial, sans-serif;
@@ -30,7 +31,7 @@ h3 {
 
 p {
     font-family: helvetica, arial, serif;
-    color: yellow;
+    color: black;
     font-size: 10pt;
 
 }
@@ -44,41 +45,69 @@ p {
 
 .field {
     font-family: helvetica, arial, serif;
-    color: yellow;
+    color: black;
     font-size: 10pt;
 }
 
 a {
-    color: white;
-    font-size: 20px;
+    color: black;
+    font-size: 18px;
 }
 
 th {
-    font-size: 20px;
-    color: yellow;
+    font-size: 26px;
+    color: black;
     border-style: solid;
+    border-color: black;
 }
 
-tr {
+tr{
 
     font-family: helvetica, arial, serif;
-    color: yellow;
-    font-size: 10pt;
+    color: black;
+    
+    font-size: 12pt;
+    
 }
 
 
 td{
     font-family: helvetica, arial, serif;
-    color: yellow;
-    font-size: 10pt;
+    color: black.;
+    font-size: 16pt;
+    
 }
 
+
+#navbar{
+
+  border-style: solid;
+  position: absolute;
+  width: 45%;
+  float: right;
+  left: 54%;
+  bottom: 90%;
+  font-size: 12pt;
+  margin-right: 50%;
+}
+
+#searchbar{
+  width: 100%;
+  position: relative;
+  width: 50%;
+  float: left;
+ }
+
+ #search-login {
+        font: 2px;
+        font-style: helvetica, serif;
+ }
 
 
 #new {
   
   position: static;
-  font-size: helvetica, arial, sans-serif;
+  font-style: helvetica, arial, sans-serif;
   padding-top: 20px;
   padding-bottom: 80px;
   padding-right: 60%;
