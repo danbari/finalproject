@@ -18,15 +18,12 @@
   <div class="field">
     <%= f.label :lastname %><br>
     <%= f.text_field :lastname %>
-  </div>
-  <div class="field">
-    <%= f.label :username %><br>
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </div>
+    <div class="field">
+        Username: <%= f.text_field :username, :size=>"10" %> <br/>
+        Password: <%= f.password_field :password, :size=>"15" %> <br/>
+    	Password Confirmation: <%= f.password_field :password_confirmation, :size=>"15" %> <br/>
+    </div>
+
   <div class="field">
     <%= f.label :street %><br>
     <%= f.text_field :street %>
