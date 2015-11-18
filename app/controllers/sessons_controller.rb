@@ -1,6 +1,7 @@
-class SessonsController < ApplicationController
+class SessionsController < ApplicationController
 skip_before_filter :authorize
-  def new
+
+ def new
   end
 
   def create
@@ -18,9 +19,9 @@ skip_before_filter :authorize
 
 
   def destroy
-      # resets session id to nil
-      session[:user_id] = nil
-      redirect_to login_url, :notice => "Logged out!"
-    end
+    # resets session id to nil
+    session[:user_id] = nil
+    redirect_to login_url, :notice => "Logged out!"
+  end
 
 end

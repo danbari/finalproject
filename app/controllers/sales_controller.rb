@@ -15,10 +15,18 @@ class SalesController < ApplicationController
   # GET /sales/new
   def new
     @sale = Sale.new
+	@customer_choice = Person.order("lastname").collect do |c| [c.lastname + ", " + c.firstname, c.id] end
+	@product_choice = Product.order("productname").collect do |p| [p.productname + " - " + p.cost.to_s, p.id] end
+	@sale.product_id = params["product_id"] #Product ID received as parameter
+	@sale.person_id = session[:user_id] #Person ID obtained from session ID - person's ID who's logged-in
+	@sale.saledate = Time.now # Today's date
+	@sale.saleprice = Product.find_by_id(params["product_id"]).cost #Getting cost from Product's table
   end
 
   # GET /sales/1/edit
   def edit
+	@customer_choice = Person.order("lastname").collect do |c| [c.lastname + ", " + c.firstname, c.id] end
+	@product_choice = Product.order("productname").collect do |p| [p.productname + " - " + p.cost.to_s, p.id] end
   end
 
   # POST /sales
@@ -69,6 +77,6 @@ class SalesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sale_params
-      params.require(:sale).permit(:saledate, :saleprice)
+      params.require(:sale).permit(:person_id, :product_id, :saledate, :saleprice)
     end
 end
