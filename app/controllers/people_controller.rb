@@ -1,7 +1,6 @@
-
 class PeopleController < ApplicationController
-skip_before_filter :authorize , :only => [:new, :create]
   before_action :set_person, only: [:show, :edit, :update, :destroy]
+ skip_before_filter :authorize, :only => [:new, :create]
 
   # GET /people
   # GET /people.json
@@ -12,6 +11,7 @@ skip_before_filter :authorize , :only => [:new, :create]
   # GET /people/1
   # GET /people/1.json
   def show
+     @sales = @person.sale
   end
 
   # GET /people/new
@@ -71,6 +71,6 @@ skip_before_filter :authorize , :only => [:new, :create]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:firstname, :lastname, :username, :password, :street, :city, :state, :zip, :email, :phone)
+      params.require(:person).permit(:firstname, :lastname, :email, :phone, :address1, :address2, :city, :state, :zip, :addlnotes, :username, :password, :password_confirmation)
     end
 end

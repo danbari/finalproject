@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
-  get 'sessons/new'
 
-  get 'sessons/create'
+  get 'sessions/new'
 
-  get 'sessons/destroy'
+  get 'sessions/create'
 
-  get "login" => "sessions#new", :as => "login"
-  delete 'logout' => "sessions#destroy", :as => "logout"
+  get 'sessions/destroy'
 
-  resources :sessions
+ get 'sessions/new'
 
-    get 'sessions/new'
+ get 'sessions/create'
 
-    get 'sessions/create'
+ get 'sessions/destroy'
+get "login" => "sessions#new", :as => "login"
+delete 'logout' => "sessions#destroy", :as => "logout"
+resources :sessions
 
-    get 'sessions/destroy'
 
 
   resources :reviews
@@ -87,4 +87,5 @@ root 'home#index'
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end

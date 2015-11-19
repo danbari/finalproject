@@ -6,11 +6,12 @@
 	     <tr>
 			<td id="search-login"><%= image_tag 'weed-coffee-logo.png', :size => "100x100"%> </td>
             <td><h1></h1>
-			<td>
-				<%= form_tag :controller => 'home', :action => 'search' do %>
-			         <p>Search: <%= text_field_tag 'searchinput', @searchinput  %> </p>
-		        <% end %>
-			</td>
+			<td align="right">
+		<%= form_tag :controller => 'home', :action => 'search' do %>
+			<p>Search: <%= text_field_tag 'searchinput' %> </p>
+		<% end %>
+		</td>
+
 			<td id ="search-login">
 						<% if session[:user_id].nil? %>
 					       <%= link_to "New Customer?", new_person_path, id: 'search-login' %>
