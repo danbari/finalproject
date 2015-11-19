@@ -103,6 +103,15 @@ td{
         font-style: helvetica, serif;
  }
 
+ #search-login a {
+    font-size: 10px;
+ }
+
+ #search-login button {
+    padding-right: 10%;
+    margin: 25px;
+ }
+
 
 #new {
   
@@ -136,6 +145,8 @@ td{
     float: left;
     position: relative;
     width: 100%;
+    border-style: solid;
+    border-color: green;
 }
 
 .header, td {

@@ -19,7 +19,7 @@
 					        Hello <%= Person.find(session[:user_id]).lastname %> !
 					        <%= button_to 'Logout', logout_path, :method => :delete %>
 				        <% end %>
-					</td>
+			</td>
 	     </tr>
 	   </table>
 
@@ -31,10 +31,10 @@
 			<td><%= link_to_unless_current "Home", home_index_path %>	</td>
 			<td><%= link_to_unless_current "About", home_about_path %> </td>
 			<td><%= link_to_unless_current "Contact", home_contact_path %></td>
-			<td><%= link_to "Products", products_path %> </td>
-			<td><%= link_to "Customers", people_path %> </td>
-			<td><%= link_to "Reviews", reviews_path %> </td>
-			<td><%= link_to "Sales", sales_path %> </td>
+			<td><%= link_to_unless_current "Products", products_path %> </td>
+			<td><%= link_to_unless_current "Customers", people_path %> </td>
+			<td><%= link_to_unless_current "Reviews", reviews_path %> </td>
+			<td><%= link_to_unless_current "Sales", sales_path %> </td>
 
 		</tr>
 	</table>
