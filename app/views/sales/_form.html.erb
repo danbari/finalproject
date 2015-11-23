@@ -11,9 +11,21 @@
     </div>
   <% end %>
 
+
+
+  <div class="field">
+    <%= f.label :person_id %><br>
+    <%= f.select :person_id, @customer_choice %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :product_id %><br>
+    <%= f.select :product_id, @product_choice %>
+  </div>
   <div class="field">
     <%= f.label :saledate %><br>
-    <%= f.datetime_select :saledate %>
+    <%= f.date_select :saledate %>
   </div>
   <div class="field">
     <%= f.label :saleprice %><br>

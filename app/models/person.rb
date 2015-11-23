@@ -2,8 +2,8 @@ class Person < ActiveRecord::Base
 validates :firstname, presence: true
 validates :lastname, presence: true
 
-validates :username, presence: true, uniqueness: true
-has_secure_password
+validates :username, :presence => true, :uniqueness => true
+	has_secure_password
 
 
 	def custname

@@ -9,18 +9,18 @@
 			<td align="right">
 		<%= form_tag :controller => 'home', :action => 'search' do %>
 			<p>Search: <%= text_field_tag 'searchinput' %> </p>
+			<%= button_to 'Search', home_search_path, :method => :get%>
 		<% end %>
 		</td>
 
-			<td id ="search-login">
-						<% if session[:user_id].nil? %>
-					       <%= link_to "New Customer?", new_person_path, id: 'search-login' %>
-					       <%= button_to 'Login', login_path, :method => :get %>
-				        <% else %>
-					        Hello <%= Person.find(session[:user_id]).lastname %> !
-					        <%= button_to 'Logout', logout_path, :method => :delete %>
-				        <% end %>
-			</td>
+		<td>
+		<% if session[:user_id].nil? %>
+				 <%= link_to "New Customer", new_person_path %>
+				 <%= button_to 'Login', login_path, :method => :get %>
+				<% else %>
+					Hello <%= Person.find(session[:user_id]).firstname %> !
+					<%= button_to 'Logout', logout_path, :method => :delete %>
+				<% end %>
 	     </tr>
 	   </table>
 

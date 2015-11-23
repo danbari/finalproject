@@ -47,7 +47,9 @@ ActiveRecord::Schema.define(version: 20151116221530) do
   end
 
   create_table "sales", force: true do |t|
-    t.datetime "saledate"
+    t.integer  "person_id"
+    t.integer  "product_id"
+    t.date     "saledate"
     t.float    "saleprice"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -15,6 +15,7 @@ skip_before_filter :authorize
       flash.now.alert = "Invalid username or password"
       render "new"
     end
+    
   end
 
 

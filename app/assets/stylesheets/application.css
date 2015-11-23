@@ -1,17 +1,21 @@
 body {
-	/*background-image: url("body-background-image.png");*/
-	/*background-image: url(body-background-image.jpg); 
+	background-image: url("coffee4.jpg");
+	/*background-image: url(body-background-image.jpg);
     background-color: #cccccc;
-    background-size: 100%;
+    /*background-size: 100%;
 }
+
 /*
 h1 {
 	color: white;
 	font-size: 24pt;
  	position: absolute;
  	margin-left: 40%;
- 	
+
 }*/
+}
+#idea{
+  background-color: white;
 }
 
 h1 {
@@ -65,9 +69,9 @@ tr{
 
     font-family: helvetica, arial, serif;
     color: black;
-    
+
     font-size: 12pt;
-    
+
 }
 
 
@@ -75,7 +79,7 @@ td{
     font-family: helvetica, arial, serif;
     color: black.;
     font-size: 16pt;
-    
+
 }
 
 
@@ -114,7 +118,7 @@ td{
 
 
 #new {
-  
+
   position: static;
   font-style: helvetica, arial, sans-serif;
   padding-top: 20px;
@@ -228,7 +232,7 @@ td{
     width:32px;
     text-indent: 100%;
     white-space: nowrap;
-    overflow: hidden; 
+    overflow: hidden;
     background-size:32px 32px; }
 
 .show:hover, .new:hover, .edit:hover, .destroy:hover, .back:hover {

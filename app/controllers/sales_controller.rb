@@ -16,17 +16,17 @@ class SalesController < ApplicationController
   def new
     @sale = Sale.new
 	@customer_choice = Person.order("lastname").collect do |c| [c.lastname + ", " + c.firstname, c.id] end
-	@product_choice = Product.order("productname").collect do |p| [p.productname + " - " + p.cost.to_s, p.id] end
+	@product_choice = Product.order("proudctname").collect do |p| [p.proudctname + " - " + p.price.to_s, p.id] end
 	@sale.product_id = params["product_id"] #Product ID received as parameter
 	@sale.person_id = session[:user_id] #Person ID obtained from session ID - person's ID who's logged-in
 	@sale.saledate = Time.now # Today's date
-	@sale.saleprice = Product.find_by_id(params["product_id"]).cost #Getting cost from Product's table
+	@sale.saleprice = Product.find_by_id(params["product_id"]).price #Getting cost from Product's table
   end
 
   # GET /sales/1/edit
   def edit
 	@customer_choice = Person.order("lastname").collect do |c| [c.lastname + ", " + c.firstname, c.id] end
-	@product_choice = Product.order("productname").collect do |p| [p.productname + " - " + p.cost.to_s, p.id] end
+	@product_choice = Product.order("proudctname").collect do |p| [p.proudctname + " - " + p.price.to_s, p.id] end
   end
 
   # POST /sales
